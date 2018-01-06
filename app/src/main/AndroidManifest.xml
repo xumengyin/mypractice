@@ -22,6 +22,11 @@
         </activity>
         <activity android:name=".testactivity.ContraintLayoutActivity">
         </activity>
+
+        <activity android:name=".testactivity.ContraintLayoutActivity2">
+        </activity>
+        <activity android:name=".testactivity.ContraintLayoutActivity3">
+        </activity>
     </application>
 
 </manifest>

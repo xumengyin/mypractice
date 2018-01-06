@@ -12,6 +12,8 @@ import android.widget.Button;
 
 import com.example.xumengyin.mypractice.testactivity.BaseActivity;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity;
+import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity2;
+import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity3;
 import com.example.xumengyin.mypractice.testactivity.WebViewTestActivity;
 
 import java.util.ArrayList;
@@ -26,6 +28,8 @@ public class MainActivity extends BaseActivity
     static {
         listdata.add(new Data("webview js test ", WebViewTestActivity.class));
         listdata.add(new Data("refresh test ", ContraintLayoutActivity.class));
+        listdata.add(new Data("contrainlayout test ", ContraintLayoutActivity2.class));
+        listdata.add(new Data("contrainlayout test2 ", ContraintLayoutActivity3.class));
     }
     @BindView(R.id.recycleview)
     RecyclerView recyclerView;
