@@ -1,5 +1,6 @@
 package com.example.xumengyin.mypractice;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -8,7 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.ViewGroup; 
 import android.widget.Button;
 
 import com.example.xumengyin.mypractice.testactivity.ArgbTestActivity;
@@ -19,11 +20,17 @@ import com.example.xumengyin.mypractice.testactivity.BehviorActivity;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity2;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity3;
+import com.example.xumengyin.mypractice.testactivity.CustomViewAty;
+import com.example.xumengyin.mypractice.testactivity.FragmentTestActivity;
+import com.example.xumengyin.mypractice.testactivity.HlistviewBugTestActivity;
 import com.example.xumengyin.mypractice.testactivity.KotlinActivity;
 import com.example.xumengyin.mypractice.testactivity.LoginActivity;
+import com.example.xumengyin.mypractice.testactivity.NotificationActivity;
 import com.example.xumengyin.mypractice.testactivity.TestScrollingActivity;
+import com.example.xumengyin.mypractice.testactivity.TestViewActivity;
 import com.example.xumengyin.mypractice.testactivity.WebViewTestActivity;
 import com.example.xumengyin.mypractice.view.DividerGridItemDecoration;
+import com.example.xumengyin.mypractice.viewmodels.MainViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +54,11 @@ public class MainActivity extends BaseActivity
         listdata.add(new Data("scrollingActivity ", TestScrollingActivity.class));
         listdata.add(new Data("cardBehaviorTest ",BehaviorTest4Activity2.class));
         listdata.add(new Data("ArgbTestActivity ",ArgbTestActivity.class));
+        listdata.add(new Data("8.0notificationTest ",NotificationActivity.class));
+        listdata.add(new Data("fragment viewpager 生命周期 ",FragmentTestActivity.class));
+        listdata.add(new Data("api 24 横向listviewbug测试 ",HlistviewBugTestActivity.class));
+        listdata.add(new Data("自定义图片文字居中按钮和权限测试 ",CustomViewAty.class));
+        listdata.add(new Data("测试下拉面板",TestViewActivity.class));
     }
     @BindView(R.id.recycleview)
     RecyclerView recyclerView;
@@ -58,6 +70,10 @@ public class MainActivity extends BaseActivity
         recyclerView.setAdapter(new Myadapter());
     }
 
+    private void testViewModel()
+    {
+        ViewModelProviders.of(this).get(MainViewModel.class);
+    }
     @Override
     protected int getcontentView()
     {

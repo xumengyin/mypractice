@@ -2,6 +2,70 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.xumengyin.mypractice">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS"/> -->
+    <!-- <uses-permission android:name="android.permission.READ_PROFILE"/> -->
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS"/> -->
+    <!-- 获取读取通讯录记录的权限 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- 连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- 外存储写权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 外存储读权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 配置权限，用来记录应用配置信息 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 手机定位信息，用来为语义等功能提供定位，提供更精准的服务 -->
+    <!-- 定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 如需使用人脸识别，还要添加：摄相头权限，拍照需要用到 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 读取缓存数据 -->
+
+
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+    <!-- 全局弹窗的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,10 +88,48 @@
             android:name=".testactivity.LoginActivity"
             android:label="@string/title_activity_login">
         </activity>
-
         <activity android:name=".testactivity.ContraintLayoutActivity2">
         </activity>
         <activity android:name=".testactivity.ContraintLayoutActivity3">
+        </activity>
+        <activity android:name=".testactivity.AutoTextActivity">
+        </activity>
+        <activity android:name=".testactivity.KotlinActivity">
+        </activity>
+        <activity
+            android:name=".lazyTest.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".testactivity.BehviorActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".testactivity.TestScrollingActivity"
+            android:label="@string/title_activity_test_scrolling"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".testactivity.BehaviorTest4Activity2">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
+        </activity>
+        <activity android:name=".testactivity.TouchTestActivity">
+        </activity>
+        <activity android:name=".testactivity.ArgbTestActivity">
+        </activity>
+        <activity android:name=".testactivity.NotificationActivity">
+        </activity>
+        <activity android:name=".testactivity.FragmentTestActivity">
+        </activity>
+        <activity
+            android:name=".testactivity.HlistviewBugTestActivity"
+            android:theme="@style/transluce">
+        </activity>
+        <activity android:name=".testactivity.CustomViewAty">
+        </activity>
+        <activity android:name=".testactivity.TestViewActivity">
         </activity>
     </application>
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.xumengyin.mypractice.testactivity.KotlinActivity">
+    <com.example.xumengyin.mypractice.view.CustomButton
+        android:layout_width="match_parent"
+        android:text="text"
+        android:layout_height="100dp"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:text="权限1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/button2"
+        android:text="权限2"
+        android:paddingRight="800px"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.example.xumengyin.mypractice.view.CoffeeView
+        app:cupColor="#42b6b7"
+        app:coasterColor="#72c7c8"
+        app:vaporColor="#bbc8c8"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".testactivity.BehaviorTest4Activity2">
+
+    <com.example.xumengyin.mypractice.view.CardListView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="card1"
+        app:bgcolor="@android:color/holo_orange_dark"
+        app:layout_behavior="com.example.xumengyin.mypractice.behavior.CardBehavior"/>
+
+    <com.example.xumengyin.mypractice.view.CardListView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="card2"
+        app:bgcolor="@android:color/holo_blue_dark"
+        app:layout_behavior="com.example.xumengyin.mypractice.behavior.CardBehavior"
+        />
+
+    <com.example.xumengyin.mypractice.view.CardListView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="card3"
+        app:bgcolor="@android:color/holo_red_dark"
+        app:layout_behavior="com.example.xumengyin.mypractice.behavior.CardBehavior"/>
+
+    <!--<com.example.xumengyin.mypractice.view.CardListView-->
+    <!--android:id="@+id/card4"-->
+    <!--app:layout_anchor="@id/card3"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="card4"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--app:bgcolor="@android:color/holo_green_dark"-->
+    <!--app:layout_behavior="com.example.xumengyin.mypractice.behavior.CardBehavior"/>-->
+</android.support.design.widget.CoordinatorLayout>

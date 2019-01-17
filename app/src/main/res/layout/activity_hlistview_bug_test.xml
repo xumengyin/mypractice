@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"/>
+
+    <com.example.xumengyin.mypractice.view.TabRelativeFixedPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:visibility="gone"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ff0000">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/home_page_icon_selector"/>
+
+                <TextView
+                    android:id="@+id/tv_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="主页afafafafa"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ff0000">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/home_page_icon_selector"/>
+
+                <TextView
+                    android:id="@+id/tv_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="主页afafafaf"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ff0000">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/home_page_icon_selector"/>
+
+                <TextView
+                    android:id="@+id/tv_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="主页afafafafafaf"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+<com.example.xumengyin.mypractice.TestFramLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="33333"/>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</com.example.xumengyin.mypractice.TestFramLayout>
+</LinearLayout>
+
+

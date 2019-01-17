@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:paddingTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:text="1"
+        android:focusable="true"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:layout_height="100dp"/>
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:translationZ="5dp"
+    android:textSize="20sp"
+    android:text="you are wrong!"
+    android:typeface="serif"
+    android:textColor="#000000"
+    android:background="@drawable/car_status_text_color"
+    android:fontFamily="serif-monospace"/>
+</LinearLayout>

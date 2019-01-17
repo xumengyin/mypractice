@@ -10,6 +10,6 @@ public class Data {
 
     public Data(String title, Class activity) {
         this.title = title;
-        this.activity = activity;
+        this.activity = activity; 
     }
 }

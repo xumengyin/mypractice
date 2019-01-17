@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/holo_blue_bright"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".testactivity.NotificationActivity">
+    <Button
+        android:id="@+id/normal_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="normal progress notification"/>
+    <Button
+        android:id="@+id/custom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="custom notification"/>
+    <Button
+        android:id="@+id/progress_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="progress notification"/>
+
+    <com.example.xumengyin.mypractice.view.MapView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+
+
+    <com.eftimoff.androipathview.PathView
+        android:id="@+id/pathView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:svg="@raw/chinahigh2"/>
+</LinearLayout>
