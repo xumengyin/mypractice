@@ -7,7 +7,7 @@ import java.util.logging.SimpleFormatter
 /**
  * Created by Administrator on 2018/5/9.
  */
-class User(var name:String="",var age:Int=0)
+class User(var name:String="",var age:Int=0) 
 
 class Feng<T : Any>(var name:T)
 

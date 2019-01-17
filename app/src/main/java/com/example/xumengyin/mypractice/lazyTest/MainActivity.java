@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import com.example.xumengyin.mypractice.R;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List; 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {

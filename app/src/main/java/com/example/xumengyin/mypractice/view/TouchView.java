@@ -9,7 +9,7 @@ import android.view.View;
 
 public class TouchView extends View
 {
-	public static final String TAG = "TouchView";
+	public static final String TAG = "TouchView"; 
 	public static final String TEST_TAG = "TouchView";
 	public TouchView(Context context, @Nullable AttributeSet attrs)
 	{

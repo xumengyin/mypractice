@@ -15,53 +15,53 @@ class CardBehavior() : CoordinatorLayout.Behavior<CardListView>() {
 
 
 
-    constructor(context: Context, attrs: AttributeSet) : this() {
+  constructor(context: Context, attrs: AttributeSet) : this() {
 
-    }
-    override fun onMeasureChild(parent: CoordinatorLayout, child: CardListView, parentWidthMeasureSpec: Int, widthUsed: Int, parentHeightMeasureSpec: Int, heightUsed: Int): Boolean {
+  }
+  override fun onMeasureChild(parent: CoordinatorLayout, child: CardListView, parentWidthMeasureSpec: Int, widthUsed: Int, parentHeightMeasureSpec: Int, heightUsed: Int): Boolean {
 
-        val parentHeight=View.MeasureSpec.getSize(parentHeightMeasureSpec)-child.headHeight*(parent.childCount-1)
+    val parentHeight=View.MeasureSpec.getSize(parentHeightMeasureSpec)-child.headHeight*(parent.childCount-1)
 
-        child.measure(parentWidthMeasureSpec,View.MeasureSpec.makeMeasureSpec(parentHeight,View.MeasureSpec.EXACTLY))
-        return true
-    }
+    child.measure(parentWidthMeasureSpec,View.MeasureSpec.makeMeasureSpec(parentHeight,View.MeasureSpec.EXACTLY))
+    return true
+  }
 
-    override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout, child: CardListView, directTargetChild: View, target: View, axes: Int, type: Int): Boolean {
-        return axes.and(ViewCompat.SCROLL_AXIS_VERTICAL)!=0&&child==directTargetChild
-    }
+  override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout, child: CardListView, directTargetChild: View, target: View, axes: Int, type: Int): Boolean {
+    return axes.and(ViewCompat.SCROLL_AXIS_VERTICAL)!=0&&child==directTargetChild
+  }
 
-    override fun onNestedPreScroll(coordinatorLayout: CoordinatorLayout, child: CardListView, target: View, dx: Int, dy: Int, consumed: IntArray, type: Int) {
-        this.logmsg("target:"+target+"--dy:"+dy)
-        var view :View?=getPreView(coordinatorLayout,child)
-        view.let {
+  override fun onNestedPreScroll(coordinatorLayout: CoordinatorLayout, child: CardListView, target: View, dx: Int, dy: Int, consumed: IntArray, type: Int) {
+    this.logmsg("target:"+target+"--dy:"+dy)
+    var view :View?=getPreView(coordinatorLayout,child)
+    view.let {
 
-            if(it is CardListView)
-            {
-                if(child.top>it.top+it.headHeight)
-                    child.offsetTopAndBottom(-dy)
-                consumed[1]=dy
-            }
-        }
-
-
+      if(it is CardListView)
+      {
+        if(child.top>it.top+it.headHeight)
+          child.offsetTopAndBottom(-dy)
+        consumed[1]=dy
+      }
     }
 
-    override fun onNestedScroll(coordinatorLayout: CoordinatorLayout, child: CardListView, target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, type: Int) {
-        super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type)
-    }
-    override fun onLayoutChild(parent: CoordinatorLayout, child: CardListView, layoutDirection: Int): Boolean {
-        parent.onLayoutChild(child,layoutDirection)
-        var index=parent.indexOfChild(child)
-        if(index>0)
-        child.offsetTopAndBottom(index*child.headHeight)
-        return true
-    }
-    fun getPreView(parent: CoordinatorLayout,child: CardListView):View?
-    {
-        var view:View?=null
-       var index=parent.indexOfChild(child)
-        if(index>0)
-            view=parent.getChildAt(index-1)
-        return view
-    }
+
+  }
+
+  override fun onNestedScroll(coordinatorLayout: CoordinatorLayout, child: CardListView, target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, type: Int) {
+    super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type)
+  }
+  override fun onLayoutChild(parent: CoordinatorLayout, child: CardListView, layoutDirection: Int): Boolean {
+    parent.onLayoutChild(child,layoutDirection)
+    var index=parent.indexOfChild(child)
+    if(index>0)
+      child.offsetTopAndBottom(index*child.headHeight)
+    return true
+  }
+  fun getPreView(parent: CoordinatorLayout,child: CardListView):View?
+  {
+    var view:View?=null
+    var index=parent.indexOfChild(child)
+    if(index>0)
+      view=parent.getChildAt(index-1)
+    return view
+  }
 }

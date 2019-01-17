@@ -8,7 +8,7 @@ import android.support.design.widget.BottomSheetDialog
 import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.CoordinatorLayout.Behavior
 import android.util.AttributeSet
-import android.view.View
+import android.view.View 
 import com.example.xumengyin.mypractice.R
 import kotlinx.android.synthetic.main.activity_behvior.*
 
@@ -21,6 +21,7 @@ class BehviorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_behvior)
         dialog.setContentView(R.layout.bottomsheet_content)
+        dialog.setCanceledOnTouchOutside(false)
         dialog.show()
     }
 

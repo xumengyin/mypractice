@@ -11,7 +11,7 @@ object DataProvider
     {
         data=str
     }
-}
+} 
 class companionClass
 {
     var companyData :Any?=null

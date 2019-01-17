@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  * <pre>
  * 若把初始化内容放到initData实现
  * 就是采用Lazy方式加载的Fragment
- * 若不需要Lazy加载则initData方法内留空,初始化内容放到initViews即可
+ * 若不需要Lazy加载则initData方法内留空,初始化内容放到initViews即可 
  *
  * 注1:
  * 如果是与ViewPager一起使用，调用的是setUserVisibleHint。

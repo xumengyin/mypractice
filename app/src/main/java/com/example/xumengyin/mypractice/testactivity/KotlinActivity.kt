@@ -8,7 +8,7 @@ import android.test.MoreAsserts
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
+import android.widget.Toast 
 import com.example.xumengyin.mypractice.Data
 import com.example.xumengyin.mypractice.R
 import com.example.xumengyin.mypractice.R.id.auto_text

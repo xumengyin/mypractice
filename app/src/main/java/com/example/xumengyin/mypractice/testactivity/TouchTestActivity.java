@@ -8,7 +8,7 @@ import com.example.xumengyin.mypractice.R;
 public class TouchTestActivity extends AppCompatActivity
 {
 
-	@Override
+	@Override 
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);

@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_test_scrolling.*
 
 class TestScrollingActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) { 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_scrolling)
         //setSupportActionBar(toolbar)

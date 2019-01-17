@@ -8,7 +8,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.TextView;
 
 
-import com.example.xumengyin.mypractice.R;
+import com.example.xumengyin.mypractice.R; 
 
 /**
  * Created by Administrator on 2017/12/27.

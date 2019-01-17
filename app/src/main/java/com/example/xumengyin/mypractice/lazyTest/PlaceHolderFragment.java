@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.example.xumengyin.mypractice.R;
 
 
-/**
+/** 
  * A placeholder fragment containing a simple view.
  * Created by Mumu
  * on 2015/11/20.

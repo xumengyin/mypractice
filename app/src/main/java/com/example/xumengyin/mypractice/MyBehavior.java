@@ -8,7 +8,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
+import android.view.View; 
 import android.widget.Button;
 import android.widget.TextView;
 

@@ -11,7 +11,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 /**
- * 分割线 有bug，有时间调下 todo
+ * 分割线 有bug，有时间调下 todo 
  */
 public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
 {

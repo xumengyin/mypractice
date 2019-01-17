@@ -12,7 +12,7 @@ public class InfoEntity implements Parcelable {
     private String title;
     private String showNumber;
 
-    public String getTitle() {
+    public String getTitle() { 
         return title;
     }
 

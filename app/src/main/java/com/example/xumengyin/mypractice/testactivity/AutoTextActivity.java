@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.example.xumengyin.mypractice.R;
 
-import butterknife.BindView;
+import butterknife.BindView; 
 
 /**
  * 使用26兼容库 自动缩放字体大小
@@ -22,7 +22,7 @@ public class AutoTextActivity extends BaseActivity
 	{
 		return R.layout.activity_auto_text;
 	}
-
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{

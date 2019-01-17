@@ -13,7 +13,7 @@ class ProexyTest
     {
         kkk="fuck"
     }
-
+ 
     override fun toString(): String {
         return "${super.toString()}+${super.toString()}"
     }

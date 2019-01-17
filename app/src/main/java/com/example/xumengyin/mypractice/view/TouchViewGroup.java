@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 import static com.example.xumengyin.mypractice.view.TouchView.TEST_TAG;
 
-public class TouchViewGroup extends LinearLayout
+public class TouchViewGroup extends LinearLayout 
 {
 	private static final String TAG = "TouchViewGroup";
 

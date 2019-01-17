@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 import com.example.xumengyin.mypractice.R;
 
-public class ArgbTestActivity extends AppCompatActivity
+public class ArgbTestActivity extends AppCompatActivity 
 {
 
 	LinearLayout vLayout;
