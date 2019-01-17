@@ -1,8 +1,9 @@
 package com.example.xumengyin.mypractice;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,10 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.xumengyin.mypractice.testactivity.ArgbTestActivity;
+import com.example.xumengyin.mypractice.testactivity.AutoTextActivity;
 import com.example.xumengyin.mypractice.testactivity.BaseActivity;
+import com.example.xumengyin.mypractice.testactivity.BehaviorTest4Activity2;
+import com.example.xumengyin.mypractice.testactivity.BehviorActivity;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity;
+import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity2;
+import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity3;
+import com.example.xumengyin.mypractice.testactivity.KotlinActivity;
 import com.example.xumengyin.mypractice.testactivity.LoginActivity;
+import com.example.xumengyin.mypractice.testactivity.TestScrollingActivity;
 import com.example.xumengyin.mypractice.testactivity.WebViewTestActivity;
+import com.example.xumengyin.mypractice.view.DividerGridItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,13 +38,23 @@ public class MainActivity extends BaseActivity
         listdata.add(new Data("webview js test ", WebViewTestActivity.class));
         listdata.add(new Data("refresh test ", ContraintLayoutActivity.class));
         listdata.add(new Data("TextinputLayout test ", LoginActivity.class));
+        listdata.add(new Data("contrainlayout test ", ContraintLayoutActivity2.class));
+        listdata.add(new Data("contrainlayout test2 ", ContraintLayoutActivity3.class));
+        listdata.add(new Data("autotext ", AutoTextActivity.class));
+        listdata.add(new Data("KotlinTest ", KotlinActivity.class));
+        listdata.add(new Data("lazyTest ", com.example.xumengyin.mypractice.lazyTest.MainActivity.class));
+        listdata.add(new Data("behaviorTest ", BehviorActivity.class));
+        listdata.add(new Data("scrollingActivity ", TestScrollingActivity.class));
+        listdata.add(new Data("cardBehaviorTest ",BehaviorTest4Activity2.class));
+        listdata.add(new Data("ArgbTestActivity ",ArgbTestActivity.class));
     }
     @BindView(R.id.recycleview)
     RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerView.addItemDecoration(new DividerGridItemDecoration(this));
         recyclerView.setAdapter(new Myadapter());
     }
 
@@ -68,12 +88,12 @@ public class MainActivity extends BaseActivity
         }
 
         @Override
-        public void onBindViewHolder(MyHolder holder, final int position) {
+        public void onBindViewHolder(final MyHolder holder, final int position) {
             holder.button.setText(listdata.get(position).title);
             holder.button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    getBaseContext().startActivity(new Intent(getBaseContext(),listdata.get(position).activity));
+                    holder.itemView.getContext().startActivity(new Intent(holder.itemView.getContext(),listdata.get(position).activity));
                 }
             });
 
