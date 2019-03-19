@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- provide a different drawable for each state-->
+    <item
+        android:id="@+id/pressed"
+        android:drawable="@drawable/colordraw1"
+        android:state_pressed="true"/>
+    <item
+        android:id="@+id/focused"
+        android:drawable="@drawable/colordraw1"
+        android:state_focused="true"/>
+    <item
+        android:id="@id/default_item"
+        android:drawable="@drawable/colordraw5"/>
+
+    <!-- specify a transition -->
+    <transition
+        android:fromId="@+id/default_item"
+        android:toId="@+id/pressed">
+        <!--animation-list  单独作为动画根标签-->
+        <animation-list>
+            <item
+                android:drawable="@drawable/colordraw2"
+                android:duration="100"/>
+            <item
+                android:drawable="@drawable/colordraw4"
+                android:duration="100"/>
+
+        </animation-list>
+    </transition>
+</animated-selector>

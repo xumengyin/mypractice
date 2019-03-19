@@ -26,7 +26,10 @@ import com.example.xumengyin.mypractice.testactivity.HlistviewBugTestActivity;
 import com.example.xumengyin.mypractice.testactivity.KotlinActivity;
 import com.example.xumengyin.mypractice.testactivity.LoginActivity;
 import com.example.xumengyin.mypractice.testactivity.NotificationActivity;
+import com.example.xumengyin.mypractice.testactivity.TestAnimationActivity;
+import com.example.xumengyin.mypractice.testactivity.TestNetActivity;
 import com.example.xumengyin.mypractice.testactivity.TestScrollingActivity;
+import com.example.xumengyin.mypractice.testactivity.TestShapeActivity;
 import com.example.xumengyin.mypractice.testactivity.TestViewActivity;
 import com.example.xumengyin.mypractice.testactivity.WebViewTestActivity;
 import com.example.xumengyin.mypractice.view.DividerGridItemDecoration;
@@ -59,6 +62,9 @@ public class MainActivity extends BaseActivity
         listdata.add(new Data("api 24 横向listviewbug测试 ",HlistviewBugTestActivity.class));
         listdata.add(new Data("自定义图片文字居中按钮和权限测试 ",CustomViewAty.class));
         listdata.add(new Data("测试下拉面板",TestViewActivity.class));
+        listdata.add(new Data("测试shape布局", TestShapeActivity.class));
+        listdata.add(new Data("测试几种动画", TestAnimationActivity.class));
+        listdata.add(new Data("测试网络 retrofit封装", TestNetActivity.class));
     }
     @BindView(R.id.recycleview)
     RecyclerView recyclerView;

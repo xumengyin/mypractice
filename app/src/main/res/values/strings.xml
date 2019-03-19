@@ -14,6 +14,13 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string-array name="sample_texts">
+        <item>Lorem ipsum dolor sit amet, duo numquam nominavi consectetuer at.</item>
+        <item>Vivendo philosophia mea et. Duo te idque appetere.</item>
+        <item>De finibus bonorum et malorum.</item>
+    </string-array>
+    <string name="clip_button">Enabled outline clipping</string>
+    <string name="unclip_button">Disable outline clipping</string>
     <string name="action_settings">Change Data</string>
     <string name="section_format">Show Data : %1$s</string>
     <string name="laoyao">老妖</string>

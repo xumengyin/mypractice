@@ -21,14 +21,15 @@ class BottomBarBehavior() : CoordinatorLayout.Behavior<View>() {
 
     }
 
-    override fun onDependentViewChanged(parent: CoordinatorLayout?, child: View?, dependency: View?): Boolean {
+
+    override fun onDependentViewChanged(parent: CoordinatorLayout, child: View, dependency: View): Boolean {
         dependency.apply {
             logmsg(""+this?.y)
         }
         return true
     }
 
-    override fun layoutDependsOn(parent: CoordinatorLayout?, child: View?, dependency: View): Boolean {
+    override fun layoutDependsOn(parent: CoordinatorLayout, child: View, dependency: View): Boolean {
         return dependency.id==R.id.anchorview
     }
 

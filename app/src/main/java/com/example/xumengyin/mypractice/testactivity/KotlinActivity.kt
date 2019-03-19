@@ -1,24 +1,16 @@
 package com.example.xumengyin.mypractice.testactivity
 
-import android.app.Activity
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
-import android.test.MoreAsserts
 import android.util.Log
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast 
-import com.example.xumengyin.mypractice.Data
+import android.widget.Toast
 import com.example.xumengyin.mypractice.R
-import com.example.xumengyin.mypractice.R.id.auto_text
 import com.example.xumengyin.mypractice.kotlin.*
 import kotlinx.android.synthetic.main.activity_auto_text.*
 import org.jetbrains.anko.db.ManagedSQLiteOpenHelper
-import org.jetbrains.anko.longToast
-import java.time.Duration
-import java.util.ArrayList
-import kotlin.properties.Delegates
 
 /**
  * Created by Administrator on 2018/5/9.
@@ -73,14 +65,14 @@ class KotlinActivity : BaseActivity(), View.OnClickListener {
         //Elvis操作符?:能够简化上面的操作，
         // ?:符号会在符号左边为空的情况才会进行下面的处理。跟?.let正好相反，例如我们可以用两行代码来简化上面从操作：
 
-        vTextView2?.text = name ?: null
+        vTextView2?.text = name ?: ""
         //导入插件可以直接使用
         auto_text.setText(name)
         auto_text.setOnClickListener(View.OnClickListener { it.id })
         var config:Config = Config(mapOf("af" to "","af" to "","af" to ""))
         //ManagedSQLiteOpenHelper.
         testCollection()
-        helloProxy.logitself()
+        helloProxy.logitself().also {  }
         helloProxy="nimei"
         helloProxy.logitself()
         var mapzz = mutableMapOf("str1" to 1,"str2" to 2)
@@ -138,7 +130,14 @@ class KotlinActivity : BaseActivity(), View.OnClickListener {
     //返回类型是函数，用大括号括起来,vararg可变长长度
     fun testFun3(vararg k:Int):(Int) -> String
     {
-        return {"1"}
+        return {
+            var haha=0
+            for (i in k.size downTo 0)
+            {
+                haha=haha+i
+            }
+            (it+haha).toString()
+        }
     }
     fun getShippingCostCalculator(): (Int) -> Double {
 //        if (delivery == Delivery.EXPEDITED) {
@@ -169,6 +168,7 @@ class KotlinActivity : BaseActivity(), View.OnClickListener {
     }
     fun testCollection()
     {
+
         var list= listOf<User>(User("xu",1),User("m",2))
         list.count { it.age>0 }
         list.forEach { it.age=3 }
@@ -241,4 +241,11 @@ class KotlinActivity : BaseActivity(), View.OnClickListener {
 fun <T>T.logitself()
 {
     Log.d("Tag",this.toString())
+}
+fun <T>List<T>.logContent()
+{
+    for (it in this)
+    {
+        println(it.toString())
+    }
 }

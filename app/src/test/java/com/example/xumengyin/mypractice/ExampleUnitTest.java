@@ -1,8 +1,9 @@
 package com.example.xumengyin.mypractice;
 
-import org.junit.Test;
+import com.example.xumengyin.mypractice.net.Api;
+import com.example.xumengyin.mypractice.net.Net;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -78,6 +79,11 @@ public class ExampleUnitTest {
             this.data = data;
         }
     }
+    @Test
+    public void netTest()
+    {
+        Net.getInstance().request(Api.class).listRepos("octocat");
 
+    }
 
 }
