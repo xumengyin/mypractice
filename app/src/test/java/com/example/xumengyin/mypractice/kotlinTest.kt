@@ -24,7 +24,8 @@ class  kotlinTest
         System.out.println("---"+haha)
         println("---${ff is Int}--")
         var map=mapOf("xu" to "1","meng" to "2","yin" to "3")
-        mutableListOf(1,3).add(11)
+        var list=mutableListOf(1,3)
+        list.firstOrNull()
         val kkk=map.map { User2(it.key) }
         val jjj=map.mapKeys { it.key+"313" }
         jjj.toString()

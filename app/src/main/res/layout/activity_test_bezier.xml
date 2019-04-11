@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".testactivity.TestBezierActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.xumengyin.mypractice.view.TestBezierView
+                android:layout_width="100dp"
+                android:layout_height="40dp"/>
+
+            <com.example.xumengyin.mypractice.view.SimpleCricleProgress
+                android:id="@+id/simpleProgress"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cpb_background_progressbar_color="#E7E7EA"
+                app:cpb_progressbar_color="#00ADF5"
+                app:cpb_progressbar_endcolor="#8200FF"
+                app:cpb_progressbar_width="10dp"
+                />
+
+            <com.example.xumengyin.mypractice.view.dashboard.TemperatureDashBoard
+                android:id="@+id/temputer_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.example.xumengyin.mypractice.view.dashboard.SpeedDashBoard
+                android:id="@+id/speed_dashboard"
+                android:layout_width="361.3dp"
+                android:layout_height="361.3dp"/>
+            <com.example.xumengyin.mypractice.view.dashboard.VoltageDashBoard
+                android:id="@+id/voltage_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.example.xumengyin.mypractice.view.dashboard.RpmDashBoard
+                android:id="@+id/rpm_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.example.xumengyin.mypractice.view.dashboard.OilDashBoard
+                android:id="@+id/oil_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

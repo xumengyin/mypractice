@@ -21,12 +21,15 @@ import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity2;
 import com.example.xumengyin.mypractice.testactivity.ContraintLayoutActivity3;
 import com.example.xumengyin.mypractice.testactivity.CustomViewAty;
+import com.example.xumengyin.mypractice.testactivity.DrawableActivity;
 import com.example.xumengyin.mypractice.testactivity.FragmentTestActivity;
 import com.example.xumengyin.mypractice.testactivity.HlistviewBugTestActivity;
 import com.example.xumengyin.mypractice.testactivity.KotlinActivity;
 import com.example.xumengyin.mypractice.testactivity.LoginActivity;
 import com.example.xumengyin.mypractice.testactivity.NotificationActivity;
 import com.example.xumengyin.mypractice.testactivity.TestAnimationActivity;
+import com.example.xumengyin.mypractice.testactivity.TestBezierActivity;
+import com.example.xumengyin.mypractice.testactivity.TestLiveDataActivity;
 import com.example.xumengyin.mypractice.testactivity.TestNetActivity;
 import com.example.xumengyin.mypractice.testactivity.TestScrollingActivity;
 import com.example.xumengyin.mypractice.testactivity.TestShapeActivity;
@@ -65,6 +68,9 @@ public class MainActivity extends BaseActivity
         listdata.add(new Data("测试shape布局", TestShapeActivity.class));
         listdata.add(new Data("测试几种动画", TestAnimationActivity.class));
         listdata.add(new Data("测试网络 retrofit封装", TestNetActivity.class));
+        listdata.add(new Data("测试自定义drawable", DrawableActivity.class));
+        listdata.add(new Data("测试贝塞尔曲线", TestBezierActivity.class));
+        listdata.add(new Data("测试LiveData", TestLiveDataActivity.class));
     }
     @BindView(R.id.recycleview)
     RecyclerView recyclerView;

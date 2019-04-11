@@ -108,4 +108,13 @@
         <attr name="shape_dot_radius" format="dimension"/>
         <attr name="shape_dot_spacing" format="dimension"/>
     </declare-styleable>
+    //简单的圆形进度渐变色
+    <declare-styleable name="CircularProgressBar">
+        <attr name="cpb_progress" format="integer" />
+        <attr name="cpb_progressbar_color" format="color" />
+        <attr name="cpb_progressbar_endcolor" format="color" />
+        <attr name="cpb_background_progressbar_color" format="color" />
+        <attr name="cpb_progressbar_width" format="dimension" />
+        <attr name="cpb_background_progressbar_width" format="dimension" />
+    </declare-styleable>
 </resources>

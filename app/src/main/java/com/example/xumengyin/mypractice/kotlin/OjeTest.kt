@@ -27,7 +27,7 @@ class companionClass
 
     }
 }
-fun Any.logmsg(str:String)
+fun Any.logmsg(str:String,tag:String=this.javaClass.simpleName)
 {
-    Log.d(this.javaClass.simpleName,str)
+    Log.d(tag,str)
 }
